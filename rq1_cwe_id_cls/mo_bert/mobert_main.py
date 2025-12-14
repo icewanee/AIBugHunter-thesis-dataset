@@ -92,7 +92,7 @@ cpp_map = \
 "CWE-562": "B",
 "CWE-587": "B",
 "CWE-676": "B",
-"CWE-690": "CH",
+"CWE-690": "C",
 "CWE-704": "C",
 "CWE-733": "B",
 "CWE-762": "V",
@@ -180,7 +180,7 @@ c_map = \
 "CWE-685": "V",
 "CWE-688": "V",
 "CWE-689": "CO",
-"CWE-690": "CH",
+"CWE-690": "C",
 "CWE-704": "C",
 "CWE-733": "B",
 "CWE-762": "V",
@@ -701,7 +701,7 @@ def main():
     args = parser.parse_args()
     # Setup CUDA, GPU
     args.n_gpu = 1
-    args.device = torch.device("cuda:1")
+    args.device = torch.device("cuda:0")
     
     # Setup logging
     logging.basicConfig(format='%(asctime)s - %(levelname)s - %(name)s -   %(message)s',datefmt='%m/%d/%Y %H:%M:%S',level=logging.INFO)
