@@ -1,4 +1,4 @@
-python mobert_main.py \
+python3.9 -u mobert_main.py \
   --output_dir=./saved_models \
   --model_name=mo_model.bin \
   --model_type=roberta \
@@ -6,9 +6,9 @@ python mobert_main.py \
   --model_name_or_path=microsoft/codebert-base \
   --do_train \
   --do_test \
-  --train_data_file=../../data/train.csv \
-  --eval_data_file=../../data/val.csv \
-  --test_data_file=../../data/test.csv \
+  --train_data_file=../../data/juliet/train.csv \
+  --eval_data_file=../../data/juliet/val.csv \
+  --test_data_file=../../data/juliet/test.csv \
   --epochs 100 \
   --block_size 512 \
   --train_batch_size 8 \
@@ -16,4 +16,4 @@ python mobert_main.py \
   --learning_rate 2e-5 \
   --max_grad_norm 1.0 \
   --evaluate_during_training \
-  --seed 123456  2>&1 | tee train.log
+  --seed 123456  2>&1 | tee train_juliet.log
